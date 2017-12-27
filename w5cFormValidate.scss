@@ -1,0 +1,33 @@
+$w5cFormValidate-errorColor: #da251d !default;
+$w5cFormValidate-errorLineHeight: 21px !default;
+$w5cFormValidate-errorMinHeight: 24px !default;
+$w5cFormValidate-errorPadding: 0 !default;
+$w5cFormValidate-errorMargin: 0 !default;
+$w5cFormValidate-errorInputBoxShadow: 0 0 4px #f5cdcb inset !default;
+$w5cFormValidate-errorInFormTablePosition: static !default;
+$w5cFormValidate-errorInFormTableMarginBottom: -20px !default;
+
+.w5c_validate_form {
+    input.error, .textarea.error {
+        border-color: $w5cFormValidate-errorColor;
+        box-shadow: $w5cFormValidate-errorInputBoxShadow;
+    }
+    .w5c_form_error {
+        display: block; 
+        min-height: $w5cFormValidate-errorMinHeight; 
+        line-height: $w5cFormValidate-errorLineHeight; 
+        color: $w5cFormValidate-errorColor;  
+        padding: $w5cFormValidate-errorPadding; 
+        margin-right: $w5cFormValidate-errorMargin;
+        text-align: left;
+        position: absolute;
+        white-space: nowrap;
+    }
+
+    .form_table {
+        .w5c_form_error {
+            position: $w5cFormValidate-errorInFormTablePosition;
+            margin-bottom: $w5cFormValidate-errorInFormTableMarginBottom;
+        }
+    }
+}
